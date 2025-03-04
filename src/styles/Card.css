@@ -7,20 +7,20 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: top;
-  /*align-items: center;*/
+  justify-content: flex-start;
+  /*flex: 1 1 250px;*/
   text-align: left;
   
-  width:  400px;
-  height:300px;  /* Ensures responsiveness */
-  aspect-ratio: 1 / 1; 
+  width:  70%;
+  height:300px;  
+  
 }
 .card-icon {
   margin-bottom: 10px;
 }
 
 .card-icon img {
-  width: 30px; /* Adjust icon size */
+  width: 30px; 
   height: 30px;
 }
 
@@ -31,3 +31,14 @@
     
   }
 }
+
+@media screen and (max-width: 550px) {
+  .card {
+    
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+    
+  }
+}
+
