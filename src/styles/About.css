@@ -100,10 +100,6 @@ p{
 .about-video {
   position: relative;
   display:inline-block;
-  /*margin-top: 30px;
-  width:300px;
-  height:250px;
-  border-radius:none;*/
   max-width: 300px;
   height:280px;
   border-radius: none;
@@ -113,8 +109,6 @@ p{
 
 .video-thumbnail {
   width: 110%;
-  /*max-width: 500px;
-  border-radius: none;*/
   height: auto;
   display: block;
   border-radius: none;
@@ -204,8 +198,6 @@ p{
 
 .why-box p {
   color: white;
-  /*justify-content: center; 
-  align-items: center; */
   text-align: justify;
   margin-right:10px;
 }
