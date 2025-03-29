@@ -1,0 +1,142 @@
+/* Book a Table Section */
+.book-a-table {
+  padding: 60px 0;
+  background: #f9f9f9;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Section Title */
+.section4-title {
+  /*margin-bottom: 40px;*/
+  text-align: center;
+  width:100%;
+}
+
+.section4-title h2 {
+  font-size: 2rem;
+  color:grey;
+  margin-bottom: 10px;
+  font-size: small;
+  
+}
+
+.section4-title p {
+  font-size: 1.2rem;
+  color: black;
+  width:100%;
+  font-size: x-large;
+}
+.book-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px; /* Keeps it well-aligned */
+}
+
+/* Layout - Two Column Structure */
+.book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+/* Left Side - Image */
+.book-image {
+  flex: 1;
+  max-width: 45%;
+}
+
+.book-image img {
+  width: 100%;
+  height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Side - Form */
+.book-form {
+  flex: 1;
+  max-width: 45%;
+}
+
+.php-email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.form-group input {
+  
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width:100%;
+}
+.form-group input[type="date"],
+.form-group input[type="time"],
+.form-group input[type="number"] {
+  flex: 1; /* Ensures each input takes equal width */
+}
+
+textarea {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px; /* Space between textarea and button */
+}
+button {
+  
+  padding: 10px 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  
+
+  
+}
+
+button:hover {
+  background-color: red;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-image, .book-form {
+    max-width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+}

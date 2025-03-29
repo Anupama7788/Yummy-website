@@ -1,0 +1,427 @@
+.about-page {
+  width: 100%;
+  
+  text-align: center;
+  padding: 10px 100px;
+  
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  max-width: 100%;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 100%;
+  height:350px;
+  border-radius: none;
+  text-align:left;
+}
+.about-text{
+  text-align: left;
+  padding-top: 0px;
+}
+.about-content {
+  text-align: left;
+  max-width: 100%;
+  padding:10px;
+  margin-top: 20px;
+}
+p{
+  font-size: 10px;
+  color:grey;
+  margin-right:300px;
+}
+
+.page-title {
+  font-size: 20px;
+  color: #333;
+  margin-right:300px;
+}
+
+.page-title span {
+  color: red;
+}
+
+.about-list {
+  list-style: none;
+  padding: 4px;
+  font-style: italic;
+  font-size: 5px;
+}
+
+.about-list li {
+  font-size: 13px;
+  margin: 5px 0;
+  max-width:60%;
+}
+.book-table{
+  border: solid 3px grey;
+  padding:5px;
+  margin-top:15px;
+  width:97%;
+  margin-left:0;
+  display: grid;
+  align-items: center;
+  text-align:center;
+}
+.book-table p{
+  margin-top: 10px;
+  text-align:center;
+  width:100%;
+  color:black;
+  font-size: 15px;
+  font-weight:bold;
+  
+}
+
+.phone-number {
+  font-size: 20px;
+  color: red;
+  text-decoration: none;
+  text-align: center;
+}
+
+.about-video {
+  position: relative;
+  display:inline-block;
+  /*margin-top: 30px;
+  width:300px;
+  height:250px;
+  border-radius:none;*/
+  max-width: 300px;
+  height:280px;
+  border-radius: none;
+  overflow: hidden;
+  
+}
+
+.video-thumbnail {
+  width: 110%;
+  /*max-width: 500px;
+  border-radius: none;*/
+  height: auto;
+  display: block;
+  border-radius: none;
+ 
+
+}
+
+.pulsating-play-btn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 0, 0, 0.7);
+  border-radius: 50%;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Pulsating Effect */
+.pulsating-play-btn::after {
+  content: "";
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 100%;
+  height: 100%;
+  
+  background: rgba(255, 0, 0, 0.5);
+  border-radius: 50%;
+  transform:translate(-50%, -50%) scale(1);
+  animation: pulse 1.5s infinite;
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+  0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(1.6);
+      opacity: 0;
+  }
+}
+
+/* Hover Effect */
+.pulsating-play-btn:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+
+/* Why Choose Yummy Section */
+.why-choose {
+  background-color: #f1f1f1;
+  display: flex; /* Makes this a flex container */
+  justify-content: center; /* Even spacing between items */
+  align-items: stretch; /* Makes all items equal height */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  width: 100%;
+  padding: 40px 0;
+  gap: 30px; /* Adds spacing between flex items */
+}
+
+
+.why-box {
+  display:flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  background: red;
+  color: white;
+  padding: 10px;
+  width: 250px; 
+  height:200px;
+  margin-left:0px;
+  border-radius: none;
+  flex-shrink: 0; 
+}
+
+.why-box p {
+  color: white;
+  /*justify-content: center; 
+  align-items: center; */
+  text-align: justify;
+  margin-right:10px;
+}
+
+.why-box h3 {
+  margin: 0 ;
+  
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: white;
+  color: red;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Each info-box should be a flex item inside .why-choose */
+.info-box1{
+  display:flex;
+}
+
+.info-box {
+  background: rgb(252, 252, 252);
+  width: 200px; 
+  height:200px;
+  text-align: center;
+  padding: 10px;
+  margin-right:50px;
+  border-radius: 5px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+
+.info-box h5 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.info-box p {
+  color: black;
+  font-size: 14px;
+  /*flex: 1; */
+  margin-right:20px;
+  text-align: justify;
+  max-width: 100%;
+}
+
+.info-box span {
+  font-size: 24px;
+  display: block;
+}
+
+
+
+
+
+/* Stats Section */
+.stats-section {
+  position:relative;
+  display: flex;
+  width:100%;
+  right: 100px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 0vw;
+  background: url("../assets/images/stats-bg.jpg") center/cover no-repeat;
+  color: white;
+  font-size:30px;
+  
+}
+.stats-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1; 
+}
+
+.stat {
+  position: relative;
+  z-index: 2; 
+  display: flex; /* Ensures h2 and p are stacked */
+  flex-direction: column; /* Stacks h2 above p */
+  align-items: center; /* Centers the content */
+  text-align: center;
+  width:100%;
+}
+.stats-section p{
+  color:white;
+  font-size: 15px;
+  text-shadow: white 100px;
+  margin-top:5px;
+  text-align:center;
+  width:100%;
+  margin-right: 0px;;
+  
+}
+.stat h2 {
+  margin: 0;
+  font-size:40px;
+  text-align:center;
+  
+}
+@media (max-width: 768px) {
+  
+  .about-page {
+    display: grid;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    text-align: center;
+    width: 100%;
+    padding: 20px; /* Adjusted padding */
+  }
+  .about-page p{
+    display:flex;
+    width:100%;
+    justify-content: center;
+  }
+  .about-list{
+    display:flex;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  .page-title {
+    
+    font-size: 24px; 
+    font-weight: bold;
+    
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px; 
+    color: #333;
+  }
+  
+
+  .about-container {
+    flex-direction: column; /* Stacks image and text */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px; /* Adjusted side padding */
+  }
+
+  .about-image img {
+    width: 90%; 
+    max-width: 300px; 
+    height: auto;
+    margin-bottom: 20px; 
+  }
+
+  .about-text, 
+  .about-content {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .about-content p {
+    display: grid;
+    width:100%;
+    font-size: 14px; 
+    line-height: 1.5;
+    text-align: center;
+    color: grey;
+  }
+
+  .book-table {
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  .phone-number {
+    font-size: 18px;
+  }
+
+  .about-video {
+    width: 100%;
+    max-width: 300px;
+  }
+  .why-choose{
+    display:grid;
+    
+  }
+  .stats-section {
+   
+    flex-direction:column;  
+    padding: 50px 60px;  
+    font-size: 20px;  
+    text-align: center;
+    align-items: center;
+  }
+
+  .stat h2 {
+    font-size: 30px;  /* Reduce heading size */
+  }
+
+  .stats-section p {
+    font-size: 14px;  /* Reduce paragraph font size */
+  }
+  
+  
+}

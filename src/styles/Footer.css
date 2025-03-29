@@ -1,0 +1,149 @@
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  width: 100%;
+  
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+/* Footer Info */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-info p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.footer-contact {
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Adds spacing between icons */
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: grey; /* Icon color */
+  font-size: 20px; /* Icon size */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.social-icons a:hover {
+  color:red; 
+}
+
+
+/* Footer Links */
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Footer Contact */
+.footer-contact h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+
+/* Footer Bottom */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;  /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width:100%;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+}
+
+.footer-bottom a {
+  color: red;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.address-icon {
+  width: 20px;  
+  height: auto;
+  margin-right: 8px; 
+  vertical-align: middle; 
+  
+}
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: flex-start; /* Aligns all content to the start */
+    gap: 20px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .footer-info p {
+    font-size: 13px;
+    max-width: 90%;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: flex-start; /* Aligns to the left */
+    gap: 10px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0; 
+    left:20px;
+   
+    position: relative;
+    
+  }
+  
+}
+
+
+
+
+

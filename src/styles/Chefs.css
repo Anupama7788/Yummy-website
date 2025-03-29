@@ -1,0 +1,112 @@
+/* Chefs Section */
+.chefs {
+  
+  background: #f9f9f9;
+  text-align: center;
+}
+.container2{
+  display:grid;
+}
+
+.section3-title {
+  
+  width:100%;
+  
+}
+
+.section3-title h5 {
+  font-size: 2rem;
+  color: grey;
+  width:100%;
+  font-size: 10px;
+  
+}
+.chef-info h5{
+  color: grey;
+}
+
+.section3-title p {
+  font-size: 1.2rem;
+  color: black;
+  width:100%;
+}
+
+.chefs-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.chef-item {
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.chef-item:hover {
+  transform: scale(1.05);
+}
+
+.chef-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.chef-info {
+  padding: 15px;
+}
+
+.chef-info h4 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.chef-info span {
+  font-size: 1rem;
+  color: #ff6b6b;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social a {
+  font-size: 1.2rem;
+  color: #555;
+  transition: color 0.3s ease-in-out;
+}
+
+.social a:hover {
+  color: #ff6b6b;
+}
+@media (max-width: 768px) {
+  .chefs-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .chef-item {
+    width: 100%;
+    max-width: 350px; /* Slightly larger on mobile */
+  }
+
+  .section3-title h5 {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .section3-title p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .chef-info h4 {
+    font-size: 1.1rem; /* Reduce title size */
+  }
+}

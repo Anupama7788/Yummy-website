@@ -1,0 +1,200 @@
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 200px;
+  background-color: rgb(245, 245, 245);
+  gap:0px;
+  
+}
+
+.home-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  
+}
+.home-content p{
+  line-height: 1.0rem;
+  font-size: medium;
+  margin-top:10px;
+  
+}
+
+.home-buttons {
+  margin-top: 20px;
+}
+
+.btn-red {
+  background: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.video-icon {
+  width: 35px; /* Adjust icon size */
+  height: 35px;
+  margin-right: 8px; /* Spacing between icon and text */
+  vertical-align: middle;
+}
+
+.btn-outline {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color:black;
+  font-size:18px;
+  
+}
+.home-image img {
+  margin-top:0px;
+  width: 70%;
+  height:70%;
+  animation: floatUpDown 3s ease-in-out infinite;
+  
+}
+.video-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-container {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {  /* Tablet View */
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 20px; /* Reduced padding for better fit */
+  }
+
+  .home-content {
+    width: 80%; /* Adjusted width for better visibility */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+  }
+
+  .home-content h1 {
+    font-size: 2.2rem; /* Slightly smaller than desktop */
+  }
+
+  .home-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 0 20px;
+  }
+
+  .home-buttons {
+    display: flex;
+    flex-direction: row; /* Keep buttons side by side in tablet view */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .home-image img {
+    width: 50%; /* Reduce image size to fit better */
+    height: auto;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column-reverse;
+    flex-wrap:wrap;
+    text-align: center;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+     height:100vh;
+    padding:20px;
+    
+  }
+
+  .home-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the text */
+    justify-content: center;
+  }
+
+  .home-content h5 {
+    font-size: 12px;
+    color:grey;
+    /*display:flex;
+    width:100%;
+    font-size: 20px; 
+    line-height: 1.0; 
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;*/
+  }
+
+  .home-image img {
+    width: 60%;
+    height:auto;
+    text-align: center;
+    justify-content:center;
+    align-items:center;
+  }
+}
+

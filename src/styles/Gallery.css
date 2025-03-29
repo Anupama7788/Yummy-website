@@ -1,0 +1,97 @@
+/* Gallery Section */
+.gallery {
+  padding: 60px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+.container5{
+  display:grid;
+}
+/* Section Title */
+
+
+.section-title5 h2 {
+  font-size: 15px;
+  color: grey;
+  
+}
+
+.section-title5 p {
+  font-size: 30px;
+  color: black;
+  width:100%;
+}
+
+.description5-title{
+  color:red;
+}
+
+/* Gallery Layout - Flexbox */
+.gallery-container {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 20px;*/
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+.gallery-track {
+  display: flex;
+  animation: scrollLeft 20s linear infinite; /* Moves left continuously */
+}
+/* Gallery Items */
+.gallery-item {
+  /*flex: 1;
+  max-width: 18%;
+  overflow: hidden;
+  
+  transition: transform 0.3s ease;*/
+  flex: 0 0 auto; /* Prevent shrinking */
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  margin-right: 15px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  
+  display: block;
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.gallery-item:nth-child(3n) img {
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+/* Keyframes for Scrolling Effect */
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Moves half of duplicated images */
+}
+/* Responsive */
+@media (max-width: 1024px) {
+  .gallery-item {
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-item {
+    max-width: 80%;
+  }
+}
