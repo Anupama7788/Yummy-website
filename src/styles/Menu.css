@@ -267,6 +267,12 @@ body {
   color:grey;
 }
 @media (max-width: 768px) {
+
+  .menu-grid {
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }  
   .testimonial-item {
     flex-direction: column;
     text-align: center;
