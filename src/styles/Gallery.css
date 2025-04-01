@@ -1,97 +1,83 @@
-/* Gallery Section */
 .gallery {
   padding: 60px 0;
   background: #f9f9f9;
   text-align: center;
 }
-.container5{
-  display:grid;
-}
-/* Section Title */
 
+.container5 {
+  display: grid;
+}
 
 .section-title5 h2 {
   font-size: 15px;
   color: grey;
-  
 }
 
 .section-title5 p {
   font-size: 30px;
   color: black;
-  width:100%;
-}
-
-.description5-title{
-  color:red;
-}
-
-/* Gallery Layout - Flexbox */
-.gallery-container {
-  /*display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding-top: 20px;*/
-  display: flex;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
   width: 100%;
 }
+
+.description5-title {
+  color: red;
+}
+
+.gallery-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
 .gallery-track {
   display: flex;
-  animation: scrollLeft 20s linear infinite; /* Moves left continuously */
+  width: max-content;
+  gap:2px;
 }
-/* Gallery Items */
+
 .gallery-item {
-  /*flex: 1;
-  max-width: 18%;
-  overflow: hidden;
-  
-  transition: transform 0.3s ease;*/
-  flex: 0 0 auto; /* Prevent shrinking */
-  width: 200px; /* Adjust as needed */
-  height: auto;
-  margin-right: 15px;
+  flex: 0 0 20%;
+  position: relative;
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
-  
   display: block;
+  
 }
 
-/* Hover Effect */
-.gallery-item:hover {
-  transform: scale(1.05);
-}
-.gallery-item:nth-child(3n) img {
-  border: 2px solid red;
-  border-radius: 5px;
-}
-
-/* Keyframes for Scrolling Effect */
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Moves half of duplicated images */
-}
-/* Responsive */
-@media (max-width: 1024px) {
-  .gallery-item {
-    max-width: 30%;
-  }
+.gallery-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 41%;
+  width: 20%;
+  height: 100%;
+  border: 10px solid red;
+  box-sizing:border-box;
+  pointer-events: none;
+  background:transparent;
+  z-index: 2;
 }
 
-@media (max-width: 768px) {
-  .gallery-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.gallery-dots {
+  text-align: center;
+  margin-top: 10px;
+}
 
-  .gallery-item {
-    max-width: 80%;
-  }
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: red;
 }
