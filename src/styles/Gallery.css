@@ -81,3 +81,41 @@
 .dot.active {
   background-color: red;
 }
+@media (min-width: 769px) {
+  .gallery-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 20%;
+    height: 100%;
+    border: 10px solid red;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+/* Mobile View: Only One Image, No Frame */
+@media (max-width: 768px) {
+  .gallery-container {
+    justify-content: center;
+  }
+  .gallery-item {
+    flex: 0 0 100%; 
+    transition: transform 2s ease-in-out;/* Only one image at a time */
+  }
+  
+
+  .gallery-container::before {
+    display: none; /* Remove the frame on mobile */
+  }
+
+  .gallery-item img {
+    object-fit: contain; /* Ensure image fits properly */
+  }
+
+  .gallery-track {
+    gap: 0; /* Remove gap in mobile view */
+  }
+}
