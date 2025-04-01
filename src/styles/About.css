@@ -396,13 +396,22 @@ p{
   }
   .why-choose{
     display:flex;
+   
     
     
   }
   .info-box1{
     display:flex;
     flex-direction: column;
+    gap:10px;
     
+  }
+  .info-box {
+    width: 60%;
+    height: auto; /* Adjusted for responsiveness */
+    margin: 0 auto; /* Centers the info box */
+    padding: 10px;
+    text-align: center;
   }
   .stats-section {
    
