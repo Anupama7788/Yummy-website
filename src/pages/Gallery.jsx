@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../styles/Gallery.css";
 import galleryImg1 from "../assets/images/gallery/gallery-1.jpg";
 import galleryImg2 from "../assets/images/gallery/gallery-2.jpg";
@@ -13,14 +13,28 @@ const images = [galleryImg1, galleryImg2, galleryImg3, galleryImg4, galleryImg5,
 
 const Gallery = () => {
   const [index, setIndex] = useState(0);
-  const visibleImages = 5;
-  
+  const trackRef = useRef(null);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const totalImages = images.length;
+  const visibleImages = window.innerWidth > 768 ? 5 : 1; // 5 for web, 1 for mobile
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // 2 sec wait + transition time
+      setIsTransitioning(true);
+      setIndex((prevIndex) => prevIndex + 1);
+    }, 2000); // Move every 2 seconds
+
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (index >= totalImages) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setIndex(0);
+      }, 1000); // Instantly reset after animation
+    }
+  }, [index]);
 
   return (
     <section id="gallery" className="gallery section">
@@ -34,10 +48,11 @@ const Gallery = () => {
 
         <div className="gallery-container">
           <div 
-            className="gallery-track" 
-            style={{ 
-              transform: `translateX(-${index * (100 / visibleImages)}%)`, 
-              transition: index === 0 ? "none" : "transform 1s ease-in-out" 
+            ref={trackRef}
+            className="gallery-track"
+            style={{
+              transform: `translateX(-${index * (100 / visibleImages)}%)`,
+              transition: isTransitioning ? "transform 1s ease-in-out" : "none"
             }}
           >
             {[...images, ...images].map((image, i) => (
@@ -45,12 +60,16 @@ const Gallery = () => {
                 <img src={image} alt={`Gallery ${i + 1}`} />
               </div>
             ))}
+            {/* Duplicate first image for smooth infinite loop */}
+            <div className="gallery-item">
+              <img src={images[0]} alt="Gallery Loop" />
+            </div>
           </div>
         </div>
 
         <div className="gallery-dots">
-          {Array.from({ length: images.length }).map((_, dotIndex) => (
-            <span key={dotIndex} className={`dot ${dotIndex === index % images.length ? 'active' : ''}`}></span>
+          {images.map((_, dotIndex) => (
+            <span key={dotIndex} className={`dot ${dotIndex === index % totalImages ? "active" : ""}`}></span>
           ))}
         </div>
       </div>
